@@ -54,7 +54,7 @@ if ntop < 0:
 
 # convert dragon.gif    -resize 64x64^  fill_dragon.gif
 
-   os.system("%s convert %s -resize 231x231^ \ -gravity center -extent 64x64 ppm:- | %s/overfeatcmd %s %d %d %d"%(ldpath, string.join(args, " "), file_dir, weight_file, ntop, net_idx, featurelayer))
+   os.system("%s convert %s -resize 231x231^ -gravity center -extent 231x231 ppm:- | %s/overfeatcmd %s %d %d %d"%(ldpath, string.join(args, " "), file_dir, weight_file, ntop, net_idx, featurelayer))
 else:
-   os.system("%s convert %s -resize 231x231^ \ -gravity center -extent 64x64 ppm:- | %s/overfeatcmd %s %d %d %d"%(ldpath, string.join(args, " "), file_dir, weight_file, ntop, net_idx, featurelayer))
+   os.system("%s convert %s -resize 231x231^ -gravity center -extent 231x231 ppm:- | %s/overfeatcmd %s %d %d %d"%(ldpath, string.join(args, " "), file_dir, weight_file, ntop, net_idx, featurelayer))
 
